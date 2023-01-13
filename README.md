@@ -1,5 +1,6 @@
 # Typing Speeder
 Typing Speeder is a clean and minimalistic typing test software.
+
 To run the program, all you have to do is open the index.html file in your browser of choice (this method is temporary and will be different in the future)
 
 ## modes
