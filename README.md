@@ -1,7 +1,7 @@
 # Typing Speeder
 Typing Speeder is a clean and minimalistic typing test software. Currently, Typing Speeder relies on Time 10 mechanics for it's WPM calculations
 
-![alt text](https://github.com/McSnurtle/Typing-Speeder/blob/res/background.png?raw=true)
+![alt text](https://github.com/McSnurtle/Typing-Speeder/blob/res/background.png)
 
 ## modes
 Time 10
