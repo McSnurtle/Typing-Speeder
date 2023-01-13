@@ -2,7 +2,7 @@
 Typing Speeder is a clean and minimalistic typing test software. Currently, Typing Speeder relies on Time 10 mechanics for it's WPM calculations
 
 ## modes
-Time 10
+Time 10 - 
 The test will calculate how long it took you to type out the sentence given - your accuracy penalties (fixing mistakes does help!)
 
 Note: for now time 10 is the only available mode, but in the future I hope to add wordcount modes, custom modes, zen modes (like monkeytype) etc,..
