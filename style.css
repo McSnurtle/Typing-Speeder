@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     background-color: #262626;
     background-image: url("res/background.png");
-    background-size
+    background-size: cover;
 }
 
 ::selection {
