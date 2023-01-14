@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bahnschrift", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 body {
@@ -13,8 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("res/background.png");
-    background-size: cover;
+    background-color: #262626;
 }
 ::selection {
     color: #fff;
