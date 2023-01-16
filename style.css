@@ -1,6 +1,5 @@
-/* Import Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+/*Some css from CodingNepal*/
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +9,24 @@
 }
 
 body {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    min-height: 100vh;
+    background-color: #262626;
+    background-image: url("res/background.png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.upper {
     display: flex;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #262626;
-    background-image: url("res/background.png");
-    background-size: cover;
 }
-
 ::selection {
     color: #fff;
     background: #131313;
@@ -118,17 +125,19 @@ body {
     outline: none;
     border: none;
     width: 105px;
+    height: auto;
     color: #fff;
     padding: 8px 0;
     font-size: 16px;
     cursor: pointer;
     border-radius: 25px;
     background: #262626;
-    transition: transform 0.3s ease;
+    transition: transform 0.15s ease;
+    text-align: center;
 }
 
     .content button:active {
-        transform: scale(0.97);
+        transform: scale(0.90);
     }
 
 .content .result-details {
@@ -227,3 +236,51 @@ li:not(:first-child) span {
         margin-top: 10px;
     }
 }
+.settings-wrapper {
+    display: flex;
+    position: ABSOLUTE;
+    align-items: center;
+    justify-self: center;
+    width: 200px;
+    padding: 8px;
+    top: 90%;
+    left: 50%;
+    background: #2e2e2e;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    justify-content: center;
+}
+    .settings-wrapper .settings-button {
+        outline: none;
+        border: none;
+        width: 105px;
+        height: auto;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 25px;
+        background: #262626;
+        transition: transform 0.15s ease;
+        text-align: center;
+    }
+        .settings-wrapper .settings-button:active {
+            transform: scale(0.90)
+        }
+    .settings-wrapper .themes-button {
+        outline: none;
+        border: none;
+        width: 105px;
+        height: auto;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 25px;
+        background: #262626;
+        transition: transform 0.15s ease;
+        text-align: center;
+    }
+        .settings-wrapper .themes-button:active {
+            transform: scale(0.90)
+        }
