@@ -5,9 +5,12 @@
     <title>Typing Speeder</title>
     <link rel="icon" href="res/logo-clean.png">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h2 class="body-title">Typing Speeder</h2>
     <div class="upper">
         <div class="logo">
             <img class="image" src="res/logo.png">
@@ -16,21 +19,27 @@
             <input type="text" class="input-field">
             <div class="content-box">
                 <div class="typing-text">
-                    <p></p>
+                    <p>Hey! If you can read this, it means the page did not load correctly... :/</p>
                 </div>
                 <div class="content">
                     <ul class="result-details">
                         <li class="time">
-                            <p>Time Left:</p>
+                            <span class="icon">
+                                <ion-icon name="time"></ion-icon>
+                            </span>
                             <span><b>10</b>s</span>
                         </li>
                         <li class="mistake">
-                            <p>Mistakes:</p>
-                            <span>0</span>
+                            <span class="icon">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </span>
+                            <span><b>0</b></span>
                         </li>
                         <li class="wpm">
-                            <p>WPM:</p>
-                            <span>0</span>
+                            <span class="icon">
+                                <ion-icon name="speedometer"></ion-icon>
+                            </span>
+                            <span><b>0</b></span>
                         </li>
                     </ul>
                     <button>Redo</button>
