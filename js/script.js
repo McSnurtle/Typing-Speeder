@@ -2,9 +2,9 @@ const typingText = document.querySelector(".typing-text p"),
 inpField = document.querySelector(".wrapper .input-field"),
 tryAgainBtn = document.querySelector(".content button"),
 timeTag = document.querySelector(".time span b"),
-mistakeTag = document.querySelector(".mistake span"),
-wpmTag = document.querySelector(".wpm span"),
-cpmTag = document.querySelector(".cpm span");
+mistakeTag = document.querySelector(".mistake span b"),
+wpmTag = document.querySelector(".wpm span b"),
+cpmTag = document.querySelector(".cpm span b");
 
 let timer,
 maxTime = 10,
@@ -12,6 +12,7 @@ timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
 function loadParagraph() {
+    console.log("Loading Sentences...")
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
     paragraphs[ranIndex].split("").forEach(char => {
@@ -24,6 +25,7 @@ function loadParagraph() {
 }
 
 function initTyping() {
+    console.log("Started Typing Test...")
     let characters = typingText.querySelectorAll("span");
     let typedChar = inpField.value.split("")[charIndex];
     if(charIndex < characters.length - 1 && timeLeft > 0) {
@@ -64,6 +66,7 @@ function initTyping() {
 }
 
 function initTimer() {
+    console.log("Started Timing...")
     if(timeLeft > 0) {
         timeLeft--;
         timeTag.innerText = timeLeft;
@@ -75,6 +78,7 @@ function initTimer() {
 }
 
 function resetGame() {
+    console.log("Resetting Test...")
     loadParagraph();
     clearInterval(timer);
     timeLeft = maxTime;
@@ -86,6 +90,7 @@ function resetGame() {
     cpmTag.innerText = 0;
 }
 
+console.log("Loaded!")
 loadParagraph();
 inpField.addEventListener("input", initTyping);
 tryAgainBtn.addEventListener("click", resetGame);

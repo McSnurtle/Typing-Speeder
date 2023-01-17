@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="WoB">
 <head>
     <meta charset="utf-8">
     <title>Typing Speeder</title>
     <link rel="icon" href="res/logo-clean.png">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <h2 class="body-title">Typing Speeder</h2>
     <div class="upper">
         <div class="logo">
             <img class="image" src="res/logo.png">
@@ -16,35 +19,87 @@
             <input type="text" class="input-field">
             <div class="content-box">
                 <div class="typing-text">
-                    <p></p>
+                    <p>Hey! If you can read this, it means the page did not load correctly... :/</p>
                 </div>
                 <div class="content">
                     <ul class="result-details">
                         <li class="time">
-                            <p>Time Left:</p>
+                            <span class="icon">
+                                <ion-icon name="time"></ion-icon>
+                            </span>
                             <span><b>10</b>s</span>
                         </li>
                         <li class="mistake">
-                            <p>Mistakes:</p>
-                            <span>0</span>
+                            <span class="icon">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </span>
+                            <span><b>0</b></span>
                         </li>
                         <li class="wpm">
-                            <p>WPM:</p>
-                            <span>0</span>
+                            <span class="icon">
+                                <ion-icon name="speedometer"></ion-icon>
+                            </span>
+                            <span><b>0</b></span>
                         </li>
                     </ul>
                     <button>Redo</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="settings-wrapper">
-        <button type="submit" class="settings-button">Settings</button>
-        <button type="submit" class="themes-button">Themes</button>
+        <div class="menu-wrapper" style:"none">
+            <div class="themes-header">
+                <h2 class="themes-title">Themes</h2>
+                <div class="themes-switcher">
+                    <input type="radio" name="themes" id="BoW">
+                    <label for="BoW">
+                        <span>
+                            BoW
+                        </span>
+                    </label>
+                    <input type="radio" name="themes" id="WoB">
+                    <label for="WoB">
+                        <span>
+                            WoB
+                        </span>
+                    </label>
+                    <input type="radio" name="themes" id="Handarbarf">
+                    <label for="Handarbarf">
+                        <span>
+                            Handerbarf
+                        </span>
+                    </label>
+
+                    <span class="slider"></span>
+                </div>
+            </div>
+            <div class="menu-body">
+                <a href="https://github.com/McSnurtle/Typing-Speeder"><ion-icon name="logo-github" class="icon"></ion-icon>Contribute</a>
+            </div>
+        </div>
+        <div class="settings-wrapper">
+            <button type="submit" class="settings-button">Settings</button>
+            <button type="submit" class="themes-button" onclick="showThemes()">Themes</button>
+        </div>
     </div>
 
     <script src="js/paragraphs.js"></script>
     <script src="js/script.js"></script>
 
+    <script>
+        var html = document.getElementsByTagName('html');
+        var themes = document.getElementsByName('themes');
+
+        for (i = 0; i < themes.length; i++) {
+            themes[i].addEventListener('change', function () {
+                html[0].classList.remove(html[0].classList.item(0));
+                html[0].classList.add(this.id);
+            });
+        }
+    </script>
+    <script>
+        function showThemes() {
+            document.getElementById('themes-menu').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
