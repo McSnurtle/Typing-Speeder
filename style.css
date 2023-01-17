@@ -56,7 +56,58 @@
         --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
         --c-border-top: 1px solid #bfbfbf
     }
-* {
+    :root.Camping {
+        --c-bg-body: #d1cfbd;
+        --c-bg-image: none;
+        --c-bg-primary: rgb(201, 199, 180);
+        --c-bg-secondary: rgb(181, 179, 156);
+        --c-bg-tertiary: rgb(79, 116, 41);
+        --c-border-radius: 25px;
+        --c-text-color: #000;
+        --c-text-mistake: rgb(96, 27, 27);
+        --c-text-correct: rgb(79, 116, 41);
+        --c-text-highlight: rgb(96, 27, 27);
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    :root.Terminal {
+        --c-bg-body: #0c0c0c;
+        --c-bg-image: none;
+        --c-bg-primary: rgb(24, 24, 24);
+        --c-bg-secondary: rgb(46, 46, 46);
+        --c-bg-tertiary: rgb(32, 32, 32);
+        --c-border-radius: 25px;
+        --c-text-color: rgb(84, 248, 73);
+        --c-text-mistake: rgb(239, 60, 60);
+        --c-text-correct: #fff;
+        --c-text-highlight: rgb(84, 248, 73);
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    :root.Monokai {
+        --c-bg-body: #23272c;
+        --c-bg-image: none;
+        --c-bg-primary: #2b3036;
+        --c-bg-secondary: #333a42;
+        --c-bg-tertiary: #23272c;
+        --c-border-radius: 25px;
+        --c-text-color: #fff;
+        --c-text-mistake: rgb(218, 60, 145);
+        --c-text-correct: rgb(73, 215, 182);
+        --c-text-highlight: rgb(73, 215, 182);
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    :root.Boomas {
+        --c-bg-body: #194813;
+        --c-bg-image: none;
+        --c-bg-primary: rgb(53, 53, 53);
+        --c-bg-secondary: rgb(46, 46, 46);
+        --c-bg-tertiary: #082404;
+        --c-border-radius: 25px;
+        --c-text-color: rgb(182, 182, 182);
+        --c-text-mistake: #082404;
+        --c-text-correct: #000;
+        --c-text-highlight: #000;
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    } * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -77,7 +128,7 @@
 } .body-title {
     font-size: 25px;
     font-weight: 200;
-    color: #fff;
+    color: var(--c-text-color);
     text-align: center;
     padding: 10px;
     top: 10%;
@@ -90,8 +141,8 @@
     justify-content: center;
     min-height: 100vh;
 } ::selection {
-    color: var(--c-text-color);
-    background: #131313;
+    color: var(--c-text-highlight);
+    background: var(--c-text-color);
 } .parent {
     position: relative;
     top: 0;
@@ -270,7 +321,7 @@
     width: 200px;
     padding: 10px;
     top: 85%;
-    left: 50%;
+    left: 45%;
     background: var(--c-bg-primary);
     border-radius: var(--c-border-radius);
     box-shadow: var(--c-box-shadow);
@@ -322,7 +373,7 @@
     background: var(--c-bg-primary);
     border-radius: var(--c-border-radius);
     box-shadow: var(--c-box-shadow);
-    transition: background-color 0.50s ease;
+    transition: background-color 0.50s ease, transform 0.15s ease;
     text-align: center;
     top: 30%;
 } .menu-wrapper .themes-title {
@@ -330,7 +381,7 @@
          font-size: 25px;
          color: var(--c-text-color);
          padding: 10px 0px;
-    } .menu-wrapper .themes-switcher input {
+  } .menu-wrapper .themes-switcher input {
         display: none;
     } .menu-wrapper .themes-switcher {
         position: relative;
@@ -338,15 +389,17 @@
         border-radius: var(--c-border-radius);
         padding: 10px ;
         margin-bottom: 20px;
-        display: flex;
-    } .menu-wrapper .themes-switcher label {
+        display: grid;
+        gap: 2px;
+        grid-template-columns: repeat(3, 1fr);
+    } .menu-wrapper .themes-switcher label > lavel {
         position: relative;
         z-index: 2;
         width: calc(100% / 3);
         color: var(--c-text-color);
     } .menu-wrapper .themes-switcher label span {
         padding: 8px 0;
-        display: flex;
+        display: block;
         justify-content: center;
         font-weight: 300;
         border-radius: var(--c-border-radius);
