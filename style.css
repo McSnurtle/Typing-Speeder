@@ -1,20 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /*Thanks to CodingNepal for some of the .typing-text css*/
-:root.BoW {
-    --c-bg-body: #f5f5f5;
-    --c-bg-image: url(res/background.png);
-    --c-bg-primary: #e0e0de;
-    --c-bg-secondary: #c1c1c1;
-    --c-bg-tertiary: #aeacac;
-    --c-border-radius: 25px;
-    --c-text-color: #000;
-    --c-text-mistake: rgb(239, 60, 60);
-    --c-text-correct: rgb(211, 147, 113);
-    --c-text-highlight: rgb(221, 204, 170);
-    --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    --c-border-top: 1px solid #bfbfbf
-}
-:root.WoB {
+:root {
     --c-bg-body: #262626;
     --c-bg-image: url(res/background.png);
     --c-bg-primary: #2e2e2e;
@@ -28,30 +14,55 @@
     --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
     --c-border-top: 1px solid #bfbfbf
 }
-:root.Handarbarf {
-    --c-bg-body: #606060;
-    --c-bg-image: url(res/background.png);
-    --c-bg-primary: rgb(150, 37, 18);
-    --c-bg-secondary: rgb(129, 97, 2);
-    --c-bg-tertiary: rgb(90, 46, 123);
-    --c-border-radius: 25px;
-    --c-text-color: #fff;
-    --c-text-mistake: rgb(248, 129, 57);
-    --c-text-correct: rgb(152, 217, 82);
-    --c-text-highlight: #faa1a1;
-    --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    --c-border-top: 1px solid #bfbfbf
-}
-
+    :root.BoW {
+        --c-bg-body: #f5f5f5;
+        --c-bg-image: url(res/background.png);
+        --c-bg-primary: #e0e0de;
+        --c-bg-secondary: #c1c1c1;
+        --c-bg-tertiary: #aeacac;
+        --c-border-radius: 25px;
+        --c-text-color: #000;
+        --c-text-mistake: rgb(239, 60, 60);
+        --c-text-correct: rgb(211, 147, 113);
+        --c-text-highlight: rgb(221, 204, 170);
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        --c-border-top: 1px solid #bfbfbf
+    }
+    :root.WoB {
+        --c-bg-body: #262626;
+        --c-bg-image: url(res/background.png);
+        --c-bg-primary: #2e2e2e;
+        --c-bg-secondary: #393939;
+        --c-bg-tertiary: #262626;
+        --c-border-radius: 25px;
+        --c-text-color: #fff;
+        --c-text-mistake: rgb(239, 60, 60);
+        --c-text-correct: rgb(211, 147, 113);
+        --c-text-highlight: rgb(221, 204, 170);
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        --c-border-top: 1px solid #bfbfbf
+    }
+    :root.Handarbarf {
+        --c-bg-body: #606060;
+        --c-bg-image: url(res/background.png);
+        --c-bg-primary: rgb(150, 37, 18);
+        --c-bg-secondary: rgb(129, 97, 2);
+        --c-bg-tertiary: rgb(90, 46, 123);
+        --c-border-radius: 25px;
+        --c-text-color: #fff;
+        --c-text-mistake: rgb(248, 129, 57);
+        --c-text-correct: rgb(152, 217, 82);
+        --c-text-highlight: #faa1a1;
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        --c-border-top: 1px solid #bfbfbf
+    }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     color: var(--c-text-color);
-}
-
-body {
+} body {
     display: block;
     align-items: center;
     justify-content: center;
@@ -62,9 +73,8 @@ body {
     background-size: cover;
     position: relative;
     text-align: center;
-    overflow: visible;
-}
-.body-title {
+    overflow: hidden;
+} .body-title {
     font-size: 25px;
     font-weight: 200;
     color: #fff;
@@ -72,81 +82,56 @@ body {
     padding: 10px;
     top: 10%;
     left: 50%;
-}
-.upper {
+    margin: auto;
+} .upper {
     display: flex;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-::selection {
+} ::selection {
     color: var(--c-text-color);
     background: #131313;
-}
-
-.parent {
+} .parent {
     position: relative;
     top: 0;
     justify-items: center;
-}
-
-.image1 {
+} .image1 {
     position: relative;
     background-position: top center;
-}
-
-.wrapper {
+} .wrapper {
     width: 770px;
     padding: 35px;
     background: var(--c-bg-primary);
     border-radius: var(--c-border-radius);
     box-shadow: var(--c-box-shadow);
     transition: background-color 0.50s ease;
-}
-
-    .wrapper .input-field {
+} .wrapper .input-field {
         opacity: 0;
         z-index: -999;
         position: absolute;
-    }
-
-    .wrapper .content-box {
+    } .wrapper .content-box {
         padding: 13px 20px 0;
         border-radius: var(--c-border-radius);
-    }
-
-.content-box .typing-text {
+    } .content-box .typing-text {
     overflow: hidden;
     max-height: 256px;
     color: var(--c-text-highlight);
-}
-
-.typing-text::-webkit-scrollbar {
+} .typing-text::-webkit-scrollbar {
     width: 0;
-}
-
-.typing-text p {
+} .typing-text p {
     font-size: 23px;
     text-align: justify;
     letter-spacing: 1px;
     word-break: break-all;
     color: var(--c-text-highlight);
-}
-
-    .typing-text p span {
+} .typing-text p span {
         position: relative;
-    }
-
-        .typing-text p span.correct {
+    } .typing-text p span.correct {
             color: var(--c-text-correct);
-        }
-
-        .typing-text p span.incorrect {
+        } .typing-text p span.incorrect {
             color: var(--c-text-mistake)
-        }
-
-            .typing-text p span.active::before {
+        } .typing-text p span.active::before {
                 position: absolute;
                 content: "";
                 height: 2px;
@@ -157,15 +142,11 @@ body {
                 border-radius: 5px;
                 background: var(--c-text-highlight);
                 animation: blink 2s forwards infinite;
-            }
-
-@keyframes blink {
+            } @keyframes blink {
     50% {
         opacity: 1;
     }
-}
-
-.content-box .content {
+} .content-box .content {
     margin-top: 17px;
     display: flex;
     padding: 12px 0;
@@ -173,9 +154,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-top: var(--c-border-top);
-}
-
-.content button {
+} .content button {
     outline: none;
     border: none;
     width: 105px;
@@ -188,61 +167,42 @@ body {
     background: var(--c-bg-secondary);
     transition: transform 0.15s ease;
     text-align: center;
-}
-    .content button:hover {
+} .content button:hover {
         background: var(--c-bg-tertiary);
         transform: scale(1.05);
-    }
-    .content button:active {
+    } .content button:active {
         transform: scale(0.90);
-    }
-
-.content .result-details {
+    } .content .result-details {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     width: calc(100% - 140px);
     justify-content: space-between;
-}
-
-.result-details li {
+} .result-details li {
     display: flex;
     height: 20px;
     list-style: none;
     position: relative;
     align-items: center;
-}
-    .result-details .icon {
+} .result-details .icon {
         display: table;
         margin: 0 auto;
         transform: scale(1.25);
         padding: 0px 0px 0;
-    }
-
-.result-details li:not(:first-child) {
+    } .result-details li:not(:first-child) {
     padding-left: 22px;
     border-left: var(--c-border-top);
-}
-
-    .result-details li p {
+} .result-details li p {
         font-size: 19px;
-    }
-
-    .result-details li span {
+    } .result-details li span {
         display: block;
         font-size: 20px;
         margin-left: 10px;
-    }
-
-li span b {
+    } li span b {
     font-weight: 500;
-}
-
-li:not(:first-child) span {
+} li:not(:first-child) span {
     font-weight: 500;
-}
-
-@media (max-width: 745px) {
+} @media (max-width: 745px) {
     .wrapper {
         padding: 20px;
     }
@@ -280,9 +240,7 @@ li:not(:first-child) span {
     .result-details li span {
         font-size: 17px;
     }
-}
-
-@media (max-width: 518px) {
+} @media (max-width: 518px) {
     .wrapper .content-box {
         padding: 10px 15px 0;
     }
@@ -298,30 +256,27 @@ li:not(:first-child) span {
     .content button {
         margin-top: 10px;
     }
-}
-.lower {
+} .lower {
     display: block;
     padding: 0 10px;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-}
-.settings-wrapper {
+} .settings-wrapper {
     display: flex;
     position: ABSOLUTE;
     align-items: center;
     justify-self: center;
     width: 200px;
     padding: 10px;
-    top: 90%;
+    top: 85%;
     left: 50%;
     background: var(--c-bg-primary);
     border-radius: var(--c-border-radius);
     box-shadow: var(--c-box-shadow);
     justify-content: center;
     transition: background-color 0.50s ease;
-}
-    .settings-wrapper .settings-button {
+} .settings-wrapper .settings-button {
         outline: none;
         border: none;
         width: 105px;
@@ -334,15 +289,12 @@ li:not(:first-child) span {
         background: var(--c-bg-secondary);
         transition: transform 0.15s ease;
         text-align: center;
-    }
-        .settings-wrapper .settings-button:hover {
+    } .settings-wrapper .settings-button:hover {
             background: var(--c-bg-tertiary);
             transform: scale(1.05);
-        }
-        .settings-wrapper .settings-button:active {
+        } .settings-wrapper .settings-button:active {
             transform: scale(0.90)
-        }
-    .settings-wrapper .themes-button {
+        } .settings-wrapper .themes-button {
         outline: none;
         border: none;
         width: 105px;
@@ -355,16 +307,12 @@ li:not(:first-child) span {
         background: var(--c-bg-secondary);
         transition: transform 0.15s ease;
         text-align: center;
-    }
-        .settings-wrapper .themes-button:hover {
+    } .settings-wrapper .themes-button:hover {
             background: var(--c-bg-tertiary);
             transform: scale(1.05);
-        }
-        .settings-wrapper .themes-button:active {
+        } .settings-wrapper .themes-button:active {
             transform: scale(0.90)
-        }
-
-.menu-wrapper {
+        } .menu-wrapper {
     display: none;
     width: 90%;
     margin: auto;
@@ -377,60 +325,42 @@ li:not(:first-child) span {
     transition: background-color 0.50s ease;
     text-align: center;
     top: 30%;
-}
-
-    .menu-wrapper .themes-title {
+} .menu-wrapper .themes-title {
          font-weight: 500;
          font-size: 25px;
          color: var(--c-text-color);
          padding: 10px 0px;
-    }
-
-    .menu-wrapper .themes-switcher input {
+    } .menu-wrapper .themes-switcher input {
         display: none;
-    }
-
-    .menu-wrapper .themes-switcher {
+    } .menu-wrapper .themes-switcher {
         position: relative;
         background: var(--c-bg-secondary);
         border-radius: var(--c-border-radius);
         padding: 10px ;
         margin-bottom: 20px;
         display: flex;
-    }
-
-    .menu-wrapper .themes-switcher label {
+    } .menu-wrapper .themes-switcher label {
         position: relative;
         z-index: 2;
         width: calc(100% / 3);
         color: var(--c-text-color);
-    }
-
-    .menu-wrapper .themes-switcher label span {
+    } .menu-wrapper .themes-switcher label span {
         padding: 8px 0;
         display: flex;
         justify-content: center;
         font-weight: 300;
         border-radius: var(--c-border-radius);
         transition: transform 0.15s ease;
-    }
-
-    .menu-wrapper .themes-switcher label span:hover {
+    } .menu-wrapper .themes-switcher label span:hover {
         cursor: pointer;
         background: var(--c-bg-tertiary);
         transform: scale(1.05);
-    }
-
-    .menu-wrapper .themes-switcher label span:active {
+    } .menu-wrapper .themes-switcher label span:active {
         transform: scale(0.90);
-    }
-
-.menu-body {
+    } .menu-body {
     padding: 20px;
     border-top: var(--c-border-top);
-}
-
-.menu-body a {
+} .menu-body a {
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -441,19 +371,13 @@ li:not(:first-child) span {
     transition: transform 0.15s ease;
     text-align: center;
     justify-content: center;
-}
-
-    .menu-body a:hover {
+} .menu-body a:hover {
         background: var(--c-bg-tertiary);
         transform: scale(1.05);
         cursor: pointer;
-    }
-
-.menu-body a:active {
+    } .menu-body a:active {
     transform: scale(0.90);
-}
-
-ion-icon {
+} ion-icon {
     display: table;
     margin-right: 5px;
     transform: scale(1.25);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="WoB">
+<html lang="en" dir="ltr" class="">
 <head>
     <meta charset="utf-8">
     <title>Typing Speeder</title>
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-wrapper" style:"none">
+        <div class="menu-wrapper" id="themes-menu">
             <div class="themes-header">
                 <h2 class="themes-title">Themes</h2>
                 <div class="themes-switcher">
@@ -74,6 +74,7 @@
             </div>
             <div class="menu-body">
                 <a href="https://github.com/McSnurtle/Typing-Speeder"><ion-icon name="logo-github" class="icon"></ion-icon>Contribute</a>
+                <a href="#" onclick="hideThemes()"><ion-icon name="chevron-back"></ion-icon>Back</a>
             </div>
         </div>
         <div class="settings-wrapper">
@@ -99,6 +100,9 @@
     <script>
         function showThemes() {
             document.getElementById('themes-menu').style.display = 'block';
+        }
+        function hideThemes() {
+            document.getElementById('themes-menu').style.display = 'none';
         }
     </script>
 </body>
