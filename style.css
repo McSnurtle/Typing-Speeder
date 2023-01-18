@@ -318,7 +318,8 @@
     position: ABSOLUTE;
     align-items: center;
     justify-self: center;
-    width: 200px;
+    width: auto;
+    height: auto;
     padding: 10px;
     top: 85%;
     left: 45%;
@@ -327,13 +328,22 @@
     box-shadow: var(--c-box-shadow);
     justify-content: center;
     transition: background-color 0.50s ease;
-} .settings-wrapper .settings-button {
+    
+}
+    .settings-wrapper .icon {
+        display: table;
+        padding: 0px 5px 5px;
+        transform: scale(1.25);
+    }
+  .settings-wrapper .settings-button {
+      text-decoration: none;
+        display: flex;
         outline: none;
         border: none;
-        width: 105px;
+        width: auto;
         height: auto;
         color: var(--c-text-color);
-        padding: 8px 0;
+        padding: 8px;
         font-size: 16px;
         cursor: pointer;
         border-radius: var(--c-border-radius);
@@ -346,12 +356,13 @@
         } .settings-wrapper .settings-button:active {
             transform: scale(0.90)
         } .settings-wrapper .themes-button {
+        display: flex;
         outline: none;
         border: none;
-        width: 105px;
+        width: auto;
         height: auto;
         color: var(--c-text-color);
-        padding: 8px 0;
+        padding: 8px;
         font-size: 16px;
         cursor: pointer;
         border-radius: var(--c-border-radius);
