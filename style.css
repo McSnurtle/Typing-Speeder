@@ -174,7 +174,8 @@
     font-size: 23px;
     text-align: justify;
     letter-spacing: 1px;
-    word-break: break-all;
+    word-break: break-word;
+    word-spacing: 1px;
     color: var(--c-text-highlight);
 } .typing-text p span {
         position: relative;

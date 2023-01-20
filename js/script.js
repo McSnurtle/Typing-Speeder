@@ -15,8 +15,8 @@ function loadParagraph() {
     console.log("Loading Sentences...")
     const ranIndex = Math.floor(Math.random() * paragraphs.length);
     typingText.innerHTML = "";
-    paragraphs[ranIndex].split("").forEach(char => {
-        let span = `<span>${char}</span>`
+    paragraphs[ranIndex].split("").forEach(word => {
+        let span = `<span>${word}</span>`
         typingText.innerHTML += span;
     });
     typingText.querySelectorAll("span")[0].classList.add("active");
@@ -62,6 +62,7 @@ function initTyping() {
     } else {
         clearInterval(timer);
         inpField.value = "";
+        loadParagraph;
     }   
 }
 
@@ -74,6 +75,8 @@ function initTimer() {
         wpmTag.innerText = wpm;
     } else {
         clearInterval(timer);
+        inpField.value = "";
+        loadParagraph;
     }
 }
 
