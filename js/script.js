@@ -7,7 +7,7 @@ wpmTag = document.querySelector(".wpm span b"),
 cpmTag = document.querySelector(".cpm span b");
 
 let timer,
-maxTime = 10,
+maxTime = 60,
 timeLeft = maxTime,
 charIndex = mistakes = isTyping = 0;
 
