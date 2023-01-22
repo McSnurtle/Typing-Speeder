@@ -4,10 +4,10 @@ Typing Speeder is a clean and minimalistic typing test software.
 To run the program, all you have to do is open the index.html file in your browser of choice (this method is temporary and will be different in the future)
 
 ## modes
-Time 10 - 
+Time 60 - 
 The test will calculate how long it took you to type out the sentence given - your accuracy penalties (fixing mistakes does help!)
 
-Note: for now time 10 is the only available mode, but in the future I hope to add wordcount modes, custom modes, zen modes (like monkeytype) etc,..
+Note: for now time 60 is the only available mode, but in the future I hope to add wordcount modes, custom modes, zen modes (like monkeytype) etc,..
 
 ## customizability
 In the future I plan to add various themes, custom background settings, font settings, and typing settings to change how you interact with the tests.
