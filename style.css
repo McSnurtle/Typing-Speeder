@@ -107,6 +107,19 @@
         --c-text-correct: #000;
         --c-text-highlight: #000;
         --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    }
+    :root.Samurai {
+        --c-bg-body: rgb(78, 23, 23);
+        --c-bg-image: none;
+        --c-bg-primary: rgb(34, 34, 34);
+        --c-bg-secondary: rgb(29, 29, 29);
+        --c-bg-tertiary: rgb(142, 114, 21);
+        --c-border-radius: 25px;
+        --c-text-color: rgb(234, 234, 234);
+        --c-text-mistake: #891313;
+        --c-text-correct: rgb(142, 114, 21);
+        --c-text-highlight: #891313;
+        --c-box-shadow: 0 10px 15px rgba(0,0,0,0.05);
     } * {
     margin: 0;
     padding: 0;
@@ -206,7 +219,8 @@
     align-items: center;
     justify-content: space-between;
     border-top: var(--c-border-top);
-} .content button {
+}
+.content button {
     outline: none;
     border: none;
     width: 105px;
@@ -217,7 +231,7 @@
     cursor: pointer;
     border-radius: var(--c-border-radius);
     background: var(--c-bg-secondary);
-    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, background-color 0.15s ease;
     text-align: center;
 } .content button:hover {
         background: var(--c-bg-tertiary);
@@ -336,8 +350,8 @@
         padding: 0px 5px 5px;
         transform: scale(1.25);
     }
-  .settings-wrapper .settings-button {
-      text-decoration: none;
+    .settings-wrapper .settings-button {
+        text-decoration: none;
         display: flex;
         outline: none;
         border: none;
@@ -349,14 +363,15 @@
         cursor: pointer;
         border-radius: var(--c-border-radius);
         background: var(--c-bg-secondary);
-        transition: transform 0.15s ease;
+        transition: transform 0.15s ease, background-color 0.50s ease;
         text-align: center;
     } .settings-wrapper .settings-button:hover {
             background: var(--c-bg-tertiary);
             transform: scale(1.05);
         } .settings-wrapper .settings-button:active {
             transform: scale(0.90)
-        } .settings-wrapper .themes-button {
+        }
+    .settings-wrapper .themes-button {
         display: flex;
         outline: none;
         border: none;
@@ -368,7 +383,8 @@
         cursor: pointer;
         border-radius: var(--c-border-radius);
         background: var(--c-bg-secondary);
-        transition: transform 0.15s ease;
+        transition: transform 0.15s ease, background-color 0.50s ease;
+        ;
         text-align: center;
     } .settings-wrapper .themes-button:hover {
             background: var(--c-bg-tertiary);
@@ -409,14 +425,15 @@
         z-index: 2;
         width: calc(100% / 3);
         color: var(--c-text-color);
-    } .menu-wrapper .themes-switcher label span {
-        padding: 8px 0;
-        display: block;
-        justify-content: center;
-        font-weight: 300;
-        border-radius: var(--c-border-radius);
-        transition: transform 0.15s ease;
-    } .menu-wrapper .themes-switcher label span:hover {
+    }
+        .menu-wrapper .themes-switcher label span {
+            padding: 8px 0;
+            display: block;
+            justify-content: center;
+            font-weight: 300;
+            border-radius: var(--c-border-radius);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        } .menu-wrapper .themes-switcher label span:hover {
         cursor: pointer;
         background: var(--c-bg-tertiary);
         transform: scale(1.05);
@@ -433,7 +450,7 @@
     margin: 10px;
     border-radius: var(--c-border-radius);
     font-weight: 300;
-    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, background-color 0.50s ease;
     text-align: center;
     justify-content: center;
 } .menu-body a:hover {

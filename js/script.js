@@ -9,7 +9,13 @@ cpmTag = document.querySelector(".cpm span b");
 let timer,
 maxTime = 60,
 timeLeft = maxTime,
-charIndex = mistakes = isTyping = 0;
+    charIndex = mistakes = isTyping = 0;
+
+document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "Enter") {
+        resetGame();
+    }
+});
 
 function loadParagraph() {
     console.log("Loading Sentences...")
